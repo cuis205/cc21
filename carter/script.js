@@ -31,7 +31,7 @@ function buildPage(DATA) {
     //var el = document.createElement('div');
     var tiles = vids[i];
     var video = document.createElement("VIDEO");
-    video.setAttribute("src",`"${tiles.Video}"`); // The image source from JSON array.
+    video.setAttribute("src",`${tiles.Video}`); // The image source from JSON array.
     //el.appendChild(video);
     video.setAttribute("class", "sizing");
     row.appendChild(video);

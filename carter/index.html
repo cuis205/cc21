@@ -3,41 +3,37 @@
 <head>
 	<title>Database Cinema</title>
 	<link href="style.css" rel="stylesheet" type="text/css"/>
-  <meta charset='utf-8'>
+  <meta charset="utf-8">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="script.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
 <script>
-//var DATA;
-//fetch("data.json")
-//.then(function(blob){ return blob.json(); })
-//.then(function(json){
-//	DATA = json;
-//	buildPage(DATA);
-//});
+var DATA;
+fetch("data.json")
+.then(function(blob){ return blob.json(); })
+.then(function(json){
+	DATA = json;
+	buildPage(data);
+});
 </script>
-
+  </head>
 <body>
 <div class="cont">
 <div class="header">hello werld </div>
 
 <div class="bigwheel">
 <div class="rowone">
-<div class="box1"></div>
-<div class="box2"></div>
 </div>
 
 
 <div class="rowtwo">
-<div class="box3"></div>
-<div class="box4"></div>
 </div>
 
 
 </div>
 </div>
 
-</body>
+  </body>
 </html>

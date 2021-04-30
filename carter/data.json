@@ -1,0 +1,26 @@
+[
+  {
+    "Video": "videos/001.mov",
+    "Order": "F"
+  },
+  {
+    "Video": "videos/002.mov",
+    "Order": "C"
+  },
+  {
+    "Video": "videos/003.mov",
+    "Order": "B"
+  },
+  {
+    "Video": "videos/004.mov",
+    "Order": "E"
+  },
+  {
+    "Video": "videos/005.mov",
+    "Order": "D"
+  },
+  {
+    "Video": "videos/006.mov",
+    "Order": "A"
+  }
+]

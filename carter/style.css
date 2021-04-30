@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'Print';
+  src:
+      url("PrintChar21.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Mondwest';
+    src: url('Mondwest-Regular.woff2') format('woff2'),
+        url('Mondwest-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mondwest';
+    src: url('Mondwest-Regular.woff2') format('woff2'),
+        url('Mondwest-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body{
+margin: 0;
+padding:0;
+font-family: 'Print';
+font-size: 9pt;
+color:white;
+background-color: black;
+overflow:hidden;}
+
+.header{
+height:10%;
+width:100vw;
+padding: 20px;}
+
+.bigwheel{
+  height:75%;
+  width:100vw;
+  display:flex;
+  flex-direction:column;
+}
+
+.rowone, .rowtwo{
+  height:50%;
+}
+.box1, .box2, .box3, .box4{
+  width:50%;
+  height:100%;
+  float:left;
+  background-color: red;
+}
+.cont{
+width:100vw;
+height:100vh;
+}
+
+::selection {
+  background: white; /* WebKit/Blink Browsers */
+  color: black;
+}
+
+.sizing{
+width:50%;
+height:100%;}

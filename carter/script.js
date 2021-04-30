@@ -33,13 +33,13 @@ function buildPage(DATA) {
     video.setAttribute("loop", "loop");
     row.appendChild(video);
 
-    video.onclick = setTimeout(function(){
+    video.onclick = function(){
     var rand = Math.floor(Math.random() * 6) + 1 ;
     video.src = "videos/00" + rand + ".mov";
     console.log(video.src);
 
 
-  },500);
+  };
 
   });
 }

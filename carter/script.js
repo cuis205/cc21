@@ -36,13 +36,13 @@ function buildPage(DATA) {
     row.appendChild(video);
 
 
-    var numbers = [1, 2, 3, 4,5,6,7];
+    var numbers = [1, 2, 3, 4,5,6,7,8,9,10];
     function shuffle(o) {
     for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
     return o;
 };
 
-  
+
 
 
     video.onclick = function(){
@@ -62,10 +62,10 @@ function buildPage(DATA) {
 
 document.addEventListener('ended', function (e){
     if($(e.target).is('video')){
-         var picker = Math.floor(Math.random() * 6) + 1 ;
+         var picker = Math.floor(Math.random() * 9) + 1 ;
          var newmood = "videos/00" + picker + ".mov";
        $(e.target).attr('src', newmood);
-      $(e.target)[0].load();
+     $(e.target)[0].load();
 
 
     }

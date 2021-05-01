@@ -30,7 +30,8 @@ font-size: 9pt;
 color:white;
 background-color: black;
 overflow:hidden;
-filter: grayscale(80%);}
+filter: contrast(110%);
+}
 
 .header{
 height:10%;
@@ -50,6 +51,7 @@ position:absolute;}
 
   position:absolute;
 }
+
 
 .rowone, .rowtwo{
 width:100vw;

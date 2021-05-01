@@ -24,13 +24,13 @@ function buildPage(DATA) {
     return true;}
 
 
-    console.log(vids);
+    //console.log(vids);
 
     var tiles = vids[i];
     var video = document.createElement("VIDEO");
     video.setAttribute("src", `${tiles.Video}`);
     video.setAttribute("class", "sizing");
-    video.setAttribute("id",`${i+1}`);
+    video.setAttribute("id",`${tiles.Order}`);
     video.setAttribute("autoplay", "autoplay");
     //video.setAttribute("loop", "loop");
     row.appendChild(video);
@@ -43,30 +43,39 @@ function buildPage(DATA) {
 };
 
 
-
-
     video.onclick = function(){
          var random = shuffle(numbers);
-    console.log(random[0]);
+    //console.log(random[0]);
 
     video.src = "videos/00" + random[0] + ".mov";
-    console.log(video.src);
-
-
-
+      
+    //console.log(video.src);
+//heygirl();
 
     };
-
+    
   });
+
 }
 
 document.addEventListener('ended', function (e){
     if($(e.target).is('video')){
          var picker = Math.floor(Math.random() * 9) + 1 ;
+      //console.log(picker);
          var newmood = "videos/00" + picker + ".mov";
        $(e.target).attr('src', newmood);
      $(e.target)[0].load();
+      //heygirl();
 
+    
 
     }
 }, true);
+
+//function heygirl(){
+//var vide = document.getElementsByTagName('video');
+//for( var i = 0; i < vide.length; i++ ){ 
+//  var brh = [];
+  
+ //   console.log( vide.item(i).src )
+//}};

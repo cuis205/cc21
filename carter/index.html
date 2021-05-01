@@ -10,6 +10,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
     <script>
+      
+      
       var DATA;
       fetch("data.json")
         .then(function(blob) {
@@ -18,7 +20,7 @@
         .then(function(json) {
           DATA = json;
           buildPage(DATA);
-
+         // heygirl();
           var vids;
         });
     </script>
@@ -27,7 +29,7 @@
     <div class="cont">
       <div class="header">hello werld</div>
 
-      <div class="bigwheel">
+      <div class="bigwheel" id="frame">
         <div class="rowone">
         <!--  <div class="box" id="one"></div>
           <div class="box" id="two"></div> -->

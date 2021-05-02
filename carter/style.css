@@ -56,13 +56,24 @@ body {
   position: absolute;
 }
 
-.music {
+.music, .is-playing{
   text-align: right;
   float: right;
   padding-right: 20px;
   width: 10%;
   cursor: pointer;
 }
+
+@-webkit-keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+.blink {
+  animation: blink 2s steps(2, start) infinite;
+}
+
 
 .ptone {
   width: 50%;

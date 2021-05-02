@@ -205,14 +205,14 @@ var btn = document.getElementById('close-button');
 function amb() {
 
   let testaud = document.querySelector(".music");
-  var audio = new Audio("Sweden.mp3");
+  var audio = new Audio("heyo.mp3");
       if(audio.paused){
     audio.play();
-    audio.volume = 0.3;
+    audio.volume = 0.4;
     testaud.innerHTML = " Eject";
   } else {
     audio.pause();
-    testaud.innerHTML = " Load Disc";
+    testaud.innerHTML = " Load";
   }
 };
 

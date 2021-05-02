@@ -8,9 +8,8 @@
     <script src="script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-
+     <script src="https://cdn.bootcss.com/typed.js/1.1.4/typed.min.js"></script>
     <script>
-      
       
       var DATA;
       fetch("data.json")
@@ -27,7 +26,14 @@
   </head>
   <body>
     <div class="cont">
-      <div class="header">hello werld</div>
+      <div class="header">
+        
+        <div class="ptone" onclick="popUp();">
+          inspect element 
+        </div>
+        
+        <div class="music"></div>
+      </div>
 
       <div class="bigwheel" id="frame">
         <div class="rowone">
@@ -40,6 +46,18 @@
           <div class="box" id="four"></div> -->
         </div>
       </div>
+      
+      
+<div id="infopop" class="ui-widget-content"><div id="but">
+<button id ="close-button">&times;</button></div>
+
+<div id="objinfo">
+  <div class="con"></div>
+ 
+  </div>
+  
+</div>
+
     </div>
   </body>
 </html>

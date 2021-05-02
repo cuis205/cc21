@@ -36,7 +36,7 @@ function buildPage(DATA) {
     row.appendChild(video);
 
 
-    var numbers = [1, 2, 3, 4,5,6,7,8,9,10];
+    var numbers = [1, 2, 3, 4,5,6,7,8,9];
     function shuffle(o) {
     for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
     return o;
@@ -54,22 +54,34 @@ function buildPage(DATA) {
 
     };
     
+    video.ondblclick = function(){
+      video.pause();
+      
+    };
+    
+    
   });
 
 }
 
 document.addEventListener('ended', function (e){
     if($(e.target).is('video')){
-         var picker = Math.floor(Math.random() * 9) + 1 ;
+         $(e.target).fadeOut(50);
+       var time = Math.floor(Math.random() * 6) + 2;
+    setTimeout(function(){  
+     
+      var picker = Math.floor(Math.random() * 9) + 1 ;
       //console.log(picker);
          var newmood = "videos/00" + picker + ".mov";
        $(e.target).attr('src', newmood);
-     $(e.target)[0].load();
+       $(e.target)[0].load();
+  
+     $(e.target).fadeIn(50);
       //heygirl();
-
+    }, time*1000);
     
-
     }
+
 }, true);
 
 //function heygirl(){
@@ -94,4 +106,98 @@ console.log(`⠀⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣄⣀⠀⠀⠀⠀⢀⣠⣤⡤⠄�
 ⣿⣿⣿⣿⣿⣿⣿⣿⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⠄⢀⣴⣾⣿⣿⣷
 ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠏⠀⣾⣿⣿⣿⣿⣿
 ⠈⠉⠉⠛⢻⣿⡉⠙⠿⣿⣿⣿⣿⣿⣿⠿⠿⠿⠟⠛⠉⠀⠀⠀⠙⠿⣿⣿⠿⠋
-⠀⠀⠀⠀⢸⣿⣿⣷⣶⣾⣿⣿⣿⣿⡏⠀⠀⠀⠀⠀⠀⠀⣰⣷⣦⠀⠀⠀⠀`);
+⠀⠀⠀⠀⢸⣿⣿⣷⣶⣾⣿⣿⣿⣿⡏⠀⠀⠀⠀⠀⠀⠀⣰⣷⣦⠀⠀⠀⠀ i see u`);
+
+
+
+  
+ // setTimeout(function() {
+  //   console.log("hi");
+
+  //  }, 1400);
+
+
+
+
+
+function popUp(){
+  $('#infopop').fadeIn(50);
+  
+ var text = [
+   " we still getting din?^1000\n ... \n^1500<div class='gor'>yeah sure </div> \n^1500<div class='con'> cool</div>"
+ ];
+
+
+  
+$(function () {
+  $(".con").typed({
+    strings: text,
+    stringsElement: null,
+    typeSpeed: 30,
+    smartBackspace: false,
+    startDelay: 70,
+     showCursor: false,
+    //cursorChar: "|",
+   // preStringTyped: function() {
+
+  //  },
+    
+    
+    callback: function() {
+      console.log(text); 
+      // $( "div" ).first().css( "color", "grey" );
+      //   $( "div" ).last().css( "color", "black" );
+       // $('.con').append('<span class="gor"></span>'); 
+       //  setInterval(gordon, 3000);
+    }
+    
+    
+    
+  });
+});
+  
+  
+  $("#infopop").draggable({
+    start: function() {
+      $(this).css({
+        transform: "none",
+        top: $(this).offset().top + "px",
+        left: $(this).offset().left + "px"
+      });
+    }
+  });
+} 
+
+window.onload = function(){
+var btn = document.getElementById('close-button');
+ btn.onclick = function(event) {
+  $('#infopop').css("display","none");
+};
+};
+
+
+// function gordon(){
+//  $(function() {
+//   $(".gor").typed({
+//     strings: ["yuh"],
+//    stringsElement: null,
+//    typeSpeed: 30,
+//    smartBackspace: true,
+//    startDelay: 170,
+//    showCursor: false,
+//    smartBackspace: false
+//   //cursorChar: "|"
+   
+// //callback: function() {
+//  //     console.log(text); 
+// //        $('.con').append('<span class="gor"></span>');
+//    //     gordon();
+//   //  }
+    
+    
+    
+//  });
+// });
+// }
+
+

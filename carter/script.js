@@ -123,6 +123,7 @@ console.log(`⠀⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣄⣀⠀⠀⠀⠀⢀⣠⣤⡤⠄�
 function popUp(){
   $('#infopop').fadeIn(50);
   $('.moxarella').html("(0)");
+  $('.moxarella').removeClass("blink");
   
  var text = [
    "<span class ='cairo2'>`</span>   we still getting din?^1000\n ... \n^1500<div class='gor'>yeah sure   <span class ='cairo2'>n</span></div> \n^1500  <div class='con'><span class ='cairo2'>`</span>  cool</div> \n^2000 <div class='con'><span class ='cairo2'>`</span>  6?</div>"
@@ -174,6 +175,23 @@ var btn = document.getElementById('close-button');
  btn.onclick = function(event) {
   $('#infopop').css("display","none");
 };
+  
+  document.querySelector(".music").addEventListener("click", function(){
+	var audio = document.getElementById('testAudio');
+  if(this.className == 'is-playing'){
+    this.className = "music";
+    this.innerHTML = " Load"
+    audio.pause();
+  }else{
+    this.className = "is-playing";
+    this.innerHTML = " Eject";
+    audio.play();
+  }
+
+});
+  
+  
+  
 };
 
 
@@ -202,17 +220,19 @@ var btn = document.getElementById('close-button');
 // }
 
 
-function amb() {
+// function amb() {
 
-  let testaud = document.querySelector(".music");
-  var audio = new Audio("heyo.mp3");
-      if(audio.paused){
-    audio.play();
-    audio.volume = 0.4;
-    testaud.innerHTML = " Eject";
-  } else {
-    audio.pause();
-    testaud.innerHTML = " Load";
-  }
-};
+//   let testaud = document.querySelector(".music");
+//   var audio = new Audio("heyo.mp3");
+//       if(audio.paused){
+//     audio.play();
+//     audio.volume = 1.0;
+//     testaud.innerHTML = " Eject";
+//   } else if (audio.play) {
+//     audio.pause();
+//     testaud.innerHTML = " Load";
+//   }
+// };
+
+
 

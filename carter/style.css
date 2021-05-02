@@ -1,78 +1,91 @@
 @font-face {
-  font-family: 'Print';
-  src:
-      url("PrintChar21.ttf") format("truetype");
+  font-family: "Print";
+  src: url("PrintChar21.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: 'Mondwest';
-    src: url('Mondwest-Regular.woff2') format('woff2'),
-        url('Mondwest-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Mondwest";
+  src: url("Mondwest-Regular.woff2") format("woff2"),
+    url("Mondwest-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Mondwest';
-    src: url('Mondwest-Regular.woff2') format('woff2'),
-        url('Mondwest-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Mondwest";
+  src: url("Mondwest-Regular.woff2") format("woff2"),
+    url("Mondwest-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-body{
-margin: 0;
-padding:0;
-font-family: 'Print';
-font-size: 9pt;
-color:white;
-background-color: black;
-overflow:hidden;
-filter: contrast(110%);
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Print";
+  font-size: 9pt;
+  color: white;
+  background-color: black;
+  overflow: hidden;
+  filter: contrast(110%);
 }
 
-.header{
-height:10%;
-width:100vw;
-padding: 20px;
-z-index:1;
-position:absolute;}
+.header {
+  height: 10%;
+  width: 100%;
+  padding-top: 20px;
+  z-index: 1;
+  position: absolute;
+}
 
-.bigwheel{
-  height:100%;
-  width:100%;
-  display:flex;
-  flex-direction:column;
-
+.bigwheel {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 
   min-width: 1300px;
 
-  position:absolute;
+  position: absolute;
 }
 
-
-.rowone, .rowtwo{
-width:100vw;
-height:50%;
-display:inline-block;
-background-color:black;
+.music {
+  text-align: right;
+  float: right;
+  padding-right: 20px;
+  width: 10%;
+  cursor: pointer;
 }
 
-.rowtwo{
-  z-index:99;
+.ptone {
+  width: 50%;
+  padding-left: 20px;
+  float: left;
+  cursor: pointer;
 }
 
-.box{
- width:50% !important;
-  margin:0px;
-  overflow:hidden;
-
+.rowone,
+.rowtwo {
+  width: 100vw;
+  height: 50%;
+  display: inline-block;
+  background-color: black;
 }
-.cont{
-width:100vw;
-height:100vh;
+
+.rowtwo {
+  z-index: 99;
+}
+
+.box {
+  width: 50% !important;
+  margin: 0px;
+  overflow: hidden;
+}
+.cont {
+  width: 100vw;
+  height: 100vh;
 }
 
 ::selection {
@@ -80,15 +93,100 @@ height:100vh;
   color: black;
 }
 
-.sizing{
-/*width:50%;*/
-    min-width: 50%;
-  max-width:50%;
-  background-color:black;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    cursor:pointer;
+.sizing {
+  /*width:50%;*/
+  min-width: 50%;
+  max-width: 50%;
+  background-color: black;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  cursor: pointer;
 
-    background-size: cover;
-    overflow: hidden;}
+  background-size: cover;
+  overflow: hidden;
+}
+
+#infopop {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  z-index: 99999;
+  width: 400px;
+  max-width: 50%;
+  color: black;
+  height: auto;
+  box-shadow: 3px 3px 3px rgb(0 0 0 / 20%);
+  display: none;
+}
+
+#objinfo {
+  padding: 10px 20px;
+  padding-bottom:5px;
+  font-size: 8pt;
+  line-height: 10pt;
+  max-height: 400px;
+  overflow: scroll;
+}
+
+#but {
+  padding: 20px 20px 20px;
+  cursor: grab;
+}
+
+#close-button {
+  cursor: pointer;
+  border: 1px solid black;
+  /*	outline: none;*/
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+
+  float: right;
+}
+
+.con {
+  display: block;
+  padding-bottom: 10px;
+    float: left;
+    width: 100%;
+}
+
+.gor {
+  display: block;
+  float:right;
+  text-align:right;
+  width:100%;
+  padding-top:5px;
+  paddint-bottom:5px;
+}
+
+/* .con::after {
+  content: "|";
+  display: inline;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+.gor::after {
+  content: "|";
+  display: inline;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+} */

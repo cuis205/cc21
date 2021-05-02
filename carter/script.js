@@ -122,9 +122,10 @@ console.log(`⠀⠀⠀⠀⠀⠀⢀⣀⣤⣤⣤⣄⣀⠀⠀⠀⠀⢀⣠⣤⡤⠄�
 
 function popUp(){
   $('#infopop').fadeIn(50);
+  $('.moxarella').html("(0)");
   
  var text = [
-   " we still getting din?^1000\n ... \n^1500<div class='gor'>yeah sure </div> \n^1500<div class='con'> cool</div>"
+   "<span class ='cairo2'>`</span>   we still getting din?^1000\n ... \n^1500<div class='gor'>yeah sure   <span class ='cairo2'>n</span></div> \n^1500  <div class='con'><span class ='cairo2'>`</span>  cool</div> \n^2000 <div class='con'><span class ='cairo2'>`</span>  6?</div>"
  ];
 
 
@@ -200,4 +201,18 @@ var btn = document.getElementById('close-button');
 // });
 // }
 
+
+function amb() {
+
+  let testaud = document.querySelector(".music");
+  var audio = new Audio("Sweden.mp3");
+      if(audio.paused){
+    audio.play();
+    audio.volume = 0.3;
+    testaud.innerHTML = " Eject";
+  } else {
+    audio.pause();
+    testaud.innerHTML = " Load Disc";
+  }
+};
 

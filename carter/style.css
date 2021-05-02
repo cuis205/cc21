@@ -4,6 +4,11 @@
 }
 
 @font-face {
+  font-family: "Cairo";
+  src: url("Cairo.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "Mondwest";
   src: url("Mondwest-Regular.woff2") format("woff2"),
     url("Mondwest-Regular.woff") format("woff");
@@ -63,8 +68,27 @@ body {
   width: 50%;
   padding-left: 20px;
   float: left;
+  position:relative;
+  top:-10px;
   cursor: pointer;
+    font-size:10pt;
 }
+
+.moxarella:hover{
+  text-decoration-line:underline;
+
+}
+
+.cairo{
+  font-family:"Cairo";
+  font-size:30pt;
+}
+
+.cairo2{
+  font-family:"Cairo";
+  font-size:25pt;
+}
+
 
 .rowone,
 .rowtwo {
@@ -123,7 +147,7 @@ body {
 }
 
 #objinfo {
-  padding: 10px 20px;
+  padding: 20px 20px;
   padding-bottom:5px;
   font-size: 8pt;
   line-height: 10pt;
@@ -159,8 +183,9 @@ body {
   float:right;
   text-align:right;
   width:100%;
-  padding-top:15px;
-  padding-bottom:15px;
+  padding-top:20px;
+  padding-bottom:20px;
+  color:blue;
 }
 
 /* .con::after {
